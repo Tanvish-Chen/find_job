@@ -135,6 +135,14 @@
       "career_url": "https://www.honor.com/cn/career/",
       "ats": "custom",
       "note": "2027 届全球校园招聘，简历投递截止 2026-09-30"
+    },
+    {
+      "id": "baai",
+      "name": "北京智源人工智能研究院（BAAI）",
+      "group": "foreign_lab",
+      "career_url": "https://www.baai.ac.cn/zh-cn",
+      "ats": "manual",
+      "note": "2027 届校园招聘已于 2026-07-27 启动（智源星计划）"
     }
   ]
 }

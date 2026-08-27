@@ -1581,6 +1581,23 @@
       "fetched_at": "2026-08-28",
       "headcount": null,
       "note": "全职｜面向 2026.10-2027.9 毕业的本科/硕士；具体岗位以官网为准"
+    },
+    {
+      "id": "baai-research-01",
+      "company_id": "baai",
+      "title": "2027届校园招聘 - 研究岗（大模型/多模态/具身智能等方向）",
+      "direction": "research",
+      "skills": ["大语言模型", "多模态大模型", "具身智能", "AI 系统"],
+      "degree": "不限",
+      "cities": ["北京"],
+      "apply_url": "https://mp.weixin.qq.com/s/N_cno5mpM_QxKst5-LVzUA",
+      "deadline": null,
+      "difficulty": { "level": "高", "note": "顶尖 AI 研究机构，重研究背景与论文" },
+      "status": "open",
+      "source": "official",
+      "fetched_at": "2026-08-28",
+      "headcount": null,
+      "note": "全职｜2026-07-27 官宣启动；投递链接为官方公众号公告，具体岗位与要求以公告为准"
     }
   ]
 }
