@@ -1,0 +1,44 @@
+{
+  "companies": [
+    {
+      "id": "moonshot",
+      "name": "月之暗面（Moonshot AI / Kimi）",
+      "group": "ai_native",
+      "career_url": "https://app.mokahr.com/campus-recruitment/moonshot/148507",
+      "ats": "moka",
+      "note": "官方 Moka 校招页，仅收录全职校招岗"
+    },
+    {
+      "id": "stepfun",
+      "name": "阶跃星辰（StepFun）",
+      "group": "ai_native",
+      "career_url": "https://app.mokahr.com/campus-recruitment/step/141903",
+      "ats": "moka",
+      "note": "StepStar 顶尖人才计划，2027 届秋招"
+    },
+    {
+      "id": "sensetime",
+      "name": "商汤科技（SenseTime）",
+      "group": "ai_native",
+      "career_url": "https://hr.sensetime.com/campus",
+      "ats": "custom",
+      "note": "商汤 2027 校园招聘（毕业时间 2026.9-2027.12）"
+    },
+    {
+      "id": "modelbest",
+      "name": "面壁智能（ModelBest）",
+      "group": "ai_native",
+      "career_url": "https://www.modelbest.cn/",
+      "ats": "manual",
+      "note": "「前进四」顶尖人才计划，面向 2027 年及以后毕业硕博，邮箱投递"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "group": "ai_native",
+      "career_url": "http://www.minimaxi.com/careers",
+      "ats": "feishu",
+      "note": "2027 届校园招聘，飞书校招站，岗位以 AI Infra/系统为主"
+    }
+  ]
+}

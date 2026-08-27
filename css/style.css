@@ -1,0 +1,318 @@
+:root {
+  --bg: #f4f6fa;
+  --card-bg: #ffffff;
+  --text: #1f2733;
+  --text-dim: #5c6a7d;
+  --border: #dde4ee;
+  --accent: #2563eb;
+  --urgent: #dc2626;
+  --warn-bg: #fff3cd;
+  --warn-text: #7a5b00;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.hidden { display: none !important; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  background: #101828;
+  color: #fff;
+  padding: 14px 20px;
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.site-name {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.updated-at {
+  color: #9aa7bd;
+  font-size: 13px;
+}
+.keyword-input {
+  margin-left: auto;
+  min-width: 240px;
+  padding: 8px 12px;
+  border: 1px solid #34445c;
+  border-radius: 8px;
+  background: #1b2740;
+  color: #fff;
+  font-size: 14px;
+}
+.keyword-input::placeholder { color: #7f8ca3; }
+.keyword-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+/* ---------- 告警横幅 ---------- */
+.warn-banner {
+  max-width: 1200px;
+  margin: 12px auto 0;
+  padding: 10px 16px;
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border: 1px solid #ecd68a;
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+/* ---------- 筛选工具条 ---------- */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(244, 246, 250, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+}
+.toolbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.filter-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.filter-row select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  color: var(--text);
+  max-width: 220px;
+}
+.filter-row.checks { font-size: 14px; }
+.result-count {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.reset-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.reset-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- 岗位列表 ---------- */
+.job-list {
+  max-width: 1200px;
+  margin: 18px auto 40px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.15s ease;
+}
+.job-card:hover { box-shadow: 0 4px 16px rgba(16, 24, 40, 0.08); }
+.job-card.urgent { border-left: 4px solid var(--urgent); }
+.job-card.closed { opacity: 0.55; filter: grayscale(0.4); }
+
+.job-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.company-badge {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #e8efff;
+  color: var(--accent);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job-title-line { min-width: 0; flex: 1; }
+.job-title-line h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+}
+.job-company {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 2px;
+}
+.urgent-tag {
+  flex: none;
+  background: #fee2e2;
+  color: var(--urgent);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 2px 10px;
+  align-self: center;
+}
+.fav-btn {
+  flex: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: #c3cbd8;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 1;
+}
+.fav-btn.active { color: #f59e0b; }
+.fav-btn:hover { color: #f59e0b; }
+
+.job-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #eef2f8;
+  color: var(--text-dim);
+}
+.tag.direction {
+  background: #e8efff;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.deadline-text { font-weight: 600; color: var(--text); }
+.job-card.urgent .deadline-text { color: var(--urgent); }
+
+.difficulty { font-weight: 600; }
+.difficulty-high { color: var(--urgent); }
+.difficulty-mid { color: #d97706; }
+.difficulty-low { color: #16a34a; }
+
+.job-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+.apply-btn {
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.apply-btn:hover { background: #1d4fd8; }
+.job-card.closed .apply-btn { pointer-events: none; background: #9aa7bd; }
+.status-label {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-select {
+  padding: 5px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+}
+
+/* ---------- 空态 / 引导 ---------- */
+.empty-state {
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  color: var(--text-dim);
+}
+.empty-state .reset-btn { margin-top: 10px; }
+
+.guide-panel {
+  max-width: 640px;
+  margin: 60px auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+.guide-panel h2 { margin-top: 0; }
+.guide-panel pre {
+  background: #101828;
+  color: #e6edf7;
+  padding: 12px 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.guide-panel code {
+  background: #eef2f8;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- 页脚 ---------- */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 20px 30px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .keyword-input { margin-left: 0; width: 100%; }
+  .job-list { grid-template-columns: 1fr; padding: 0 12px; }
+  .toolbar { padding: 10px 12px; }
+}

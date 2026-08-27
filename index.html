@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 校招雷达</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="site-name">AI 校招雷达</h1>
+    <span class="updated-at" id="updatedAt"></span>
+    <input type="search" id="keywordInput" class="keyword-input"
+           placeholder="搜索公司 / 岗位 / 技能…" autocomplete="off">
+  </div>
+</header>
+
+<div id="warnBanner" class="warn-banner hidden"></div>
+
+<section class="toolbar">
+  <div class="toolbar-inner">
+    <div class="filter-row">
+      <label>方向 <select id="directionFilter"></select></label>
+      <label>城市 <select id="cityFilter"></select></label>
+      <label>公司 <select id="companyFilter"></select></label>
+      <label>类别 <select id="groupFilter"></select></label>
+      <label>投递状态 <select id="statusFilter"></select></label>
+      <label>排序
+        <select id="sortSelect">
+          <option value="deadline">截止日期最近优先</option>
+          <option value="added">录入时间最新优先</option>
+          <option value="company">公司名称</option>
+        </select>
+      </label>
+    </div>
+    <div class="filter-row checks">
+      <label><input type="checkbox" id="onlyUrgent"> 只看 7 天内截止</label>
+      <label><input type="checkbox" id="onlyFavorites"> 只看收藏</label>
+      <label><input type="checkbox" id="hideClosed" checked> 隐藏已关闭</label>
+      <span class="result-count" id="resultCount"></span>
+      <button type="button" id="resetBtn" class="reset-btn">重置</button>
+    </div>
+  </div>
+</section>
+
+<main id="jobList" class="job-list" aria-live="polite"></main>
+
+<div id="emptyState" class="empty-state hidden">
+  <p>没有符合条件的岗位</p>
+  <button type="button" id="emptyResetBtn" class="reset-btn">重置筛选</button>
+</div>
+
+<div id="guidePanel" class="guide-panel hidden">
+  <h2>无法加载数据</h2>
+  <p id="guideReason"></p>
+  <p>请在项目目录运行下面的命令启动本地服务：</p>
+  <pre>py -m http.server 8000</pre>
+  <p>然后在浏览器打开 <code>http://localhost:8000</code></p>
+</div>
+
+<footer class="footer">
+  <p>数据来自各公司官方招聘页公开信息并人工核对，具体以官方发布为准。收藏与投递状态仅保存在你的浏览器中。</p>
+</footer>
+
+<script src="./js/config.js"></script>
+<script src="./js/store.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

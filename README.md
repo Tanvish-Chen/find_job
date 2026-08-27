@@ -1,0 +1,120 @@
+# AI 校招雷达
+
+聚合大模型 / 人工智能 / 深度学习方向企业的**应届毕业生校园招聘**信息：岗位、所需技能、简历投递地址、截止日期、招聘难度，一页看清。
+
+纯静态网站（原生 HTML / CSS / JS + JSON 数据），无构建步骤、无后端、无服务器成本。
+
+## 本地预览
+
+在项目根目录运行：
+
+```
+py -m http.server 8000
+```
+
+浏览器打开 `http://localhost:8000`。
+
+> 注意：本机直接敲 `python` 会触发 Windows 商店占位程序，请用 `py` 启动器。也不能直接双击 `index.html` 打开（浏览器在 file:// 协议下禁止加载 JSON 数据），页面会提示你如何启动本地服务。
+
+## 功能说明
+
+- **五维筛选**：技术方向 / 城市 / 公司 / 公司类别 / 投递状态，外加关键词搜索（公司、岗位名、技能）
+- **排序**：默认按截止日期最近优先；滚动招聘与已截止的岗位自动沉底
+- **临近截止高亮**：7 天内截止的岗位红色标记
+- **收藏与投递跟踪**：点 ☆ 收藏职位；每条岗位可标记投递状态（未投 / 已投 / 面试中 / 已获 offer / 被拒）。这些数据只存在你当前浏览器的 localStorage 里，换浏览器或设备不会同步
+- **数据容错**：JSON 里个别记录写错不会让页面崩溃，坏记录会被跳过并在页面顶部提示
+
+## 初始数据现状
+
+首版数据来自**各公司官方校招页的人工核实采集**（2026-08-28），均为真实、可溯源的岗位，未做任何编造。当前覆盖 **5 家 AI 原生公司、34 个全职校招岗位**：
+
+| 公司 | 校招通道 | 岗位数 |
+|---|---|---|
+| 月之暗面（Kimi） | Moka 校招页 | 9 |
+| 阶跃星辰（StepFun） | Moka 校招页（StepStar 计划，截止 10-30） | 11 |
+| 商汤科技 | 官方 2027 校招（截止 12-31） | 5 |
+| MiniMax | 飞书校招站（AI Infra/系统为主） | 8 |
+| 面壁智能 | 「前进四」顶尖人才计划 | 1 |
+
+**时点说明（重要）**：现在是 2026 年 8 月底，**27 届秋招刚启动**，很多公司岗位还没上全，部分官网为动态渲染、且反爬较强，因此首版只收录了能核实的这一批。9 月起岗位会明显增多，请按下方「维护操作手册」持续补充。
+
+**以下公司已确认有 27 届校招通道、但岗位列表为动态页面，建议直接浏览器打开补充**：
+- 百川智能「2027 源点计划」：`https://cq6qe6bvfr6.jobs.feishu.cn/646926/`
+- 生数科技校招官网：`https://shengshu.jobs.feishu.cn/692892`
+- 第四范式 Moka 校招：`https://app.mokahr.com/campus_apply/4paradigm/5073`
+
+**暂未发现 27 届校招岗位的**：DeepSeek（官网动态渲染，9 月初复查）、零一万物（仅社招站）、硅基流动（官网无招聘入口）、旷视、小冰。
+
+## 数据文件
+
+| 文件 | 内容 |
+|---|---|
+| `data/companies.json` | 公司清单：id、名称、类别（ai_native / big_tech / foreign_lab）、官方校招页地址、招聘系统类型 |
+| `data/jobs.json` | 全部岗位记录 + 顶层 `updated_at`（数据更新日期，显示在页面顶栏） |
+
+### 岗位记录字段
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `id` | 是 | 规则：`公司id-方向码-两位序号`，如 `deepseek-llm-01`。**一经录入不要更改**（收藏和投递状态按它关联） |
+| `company_id` | 是 | 必须是 companies.json 中已有的 id |
+| `title` | 是 | 岗位名称 |
+| `direction` | 是 | 六选一：`llm` 大模型算法 / `multimodal` 多模态·生成 / `infra` 推理优化·AI Infra / `app` AI 应用开发 / `research` AI 研究 / `other` 其他 |
+| `skills` | 否 | 技能要求，字符串数组 |
+| `degree` | 否 | `不限` / `本科` / `硕士` / `博士`（语义为「及以上」），缺省为 `不限` |
+| `cities` | 否 | 工作城市数组 |
+| `apply_url` | 是 | 简历投递地址；拿不到岗位直链时填公司校招页 |
+| `deadline` | 是 | `YYYY-MM-DD` 或 `null`（null 表示滚动招聘） |
+| `difficulty` | 是 | `{ "level": "高"|"中"|"低", "note": "一句话备注" }` |
+| `status` | 否 | `open` / `closed`。岗位下架改成 `closed`，不要删除（保留历史） |
+| `source` | 否 | `official`（官方渠道抓取）/ `manual`（人工录入） |
+| `fetched_at` | 否 | 本条数据采集/核对日期 |
+| `headcount` | 否 | 招聘人数，不知道填 `null` |
+| `note` | 否 | 补充说明 |
+
+## 维护操作手册
+
+推荐直接在 **GitHub 网页端编辑**，不需要在本地装任何工具：
+
+1. 打开本仓库 → `data/jobs.json` → 点右上角铅笔图标（Edit this file）
+2. 复制下面模板，填好后粘贴到 `jobs` 数组里（注意前一条记录结尾要有逗号）：
+
+```json
+{
+  "id": "zhipu-app-03",
+  "company_id": "zhipu",
+  "title": "AI 应用开发工程师（2027 届）",
+  "direction": "app",
+  "skills": ["Python", "RAG", "LangChain"],
+  "degree": "本科",
+  "cities": ["北京"],
+  "apply_url": "https://career.zhipuai.cn/campus/xxxx",
+  "deadline": "2026-11-30",
+  "difficulty": { "level": "中", "note": "面试两轮，重项目经验" },
+  "status": "open",
+  "source": "manual",
+  "fetched_at": "2026-09-10",
+  "headcount": null,
+  "note": ""
+}
+```
+
+3. 把文件顶部的 `"updated_at"` 改成当天日期
+4. 点 **Commit changes**，等 1–2 分钟 GitHub Pages 自动重新部署即可生效
+
+**提交前自查清单：**
+- [ ] 每条记录结尾有逗号（`jobs` 数组最后一条不加）
+- [ ] 日期格式为 `YYYY-MM-DD` 或 `null`
+- [ ] `direction` 是六个码值之一
+- [ ] `id` 没有和已有记录重复
+- [ ] `company_id` 在 companies.json 中存在（新增公司要先在 companies.json 加一条）
+
+写错了也不用慌：页面会自动跳过有问题的记录并提示，改回来即可。
+
+## 部署（GitHub Pages）
+
+1. 在 GitHub 新建仓库（建议名 `ai-campus-radar`），把本项目推送上去
+2. 仓库 **Settings → Pages → Build and deployment → Source** 选 *Deploy from a branch*，Branch 选 `main` / `/ (root)`，保存
+3. 1–2 分钟后访问 `https://<用户名>.github.io/<仓库名>/`
+
+页面所有资源引用均为相对路径，子路径部署无需额外配置。
