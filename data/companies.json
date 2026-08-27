@@ -39,6 +39,22 @@
       "career_url": "http://www.minimaxi.com/careers",
       "ats": "feishu",
       "note": "2027 届校园招聘，飞书校招站，岗位以 AI Infra/系统为主"
+    },
+    {
+      "id": "deepseek",
+      "name": "深度求索（DeepSeek）",
+      "group": "ai_native",
+      "career_url": "https://talent.deepseek.com/",
+      "ats": "moka",
+      "note": "无独立校招通道，官网在招岗位统一接受应届生投递"
+    },
+    {
+      "id": "baichuan",
+      "name": "百川智能（Baichuan）",
+      "group": "ai_native",
+      "career_url": "https://cq6qe6bvfr6.jobs.feishu.cn/646926",
+      "ats": "feishu",
+      "note": "「百川星耀计划」校招专项（2027 源点计划）"
     }
   ]
 }
