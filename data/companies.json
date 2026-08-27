@@ -87,6 +87,38 @@
       "career_url": "https://campus.kuaishou.cn/recruit/campus/e/#/campus/jobs?recruitSubProjectCodes=20271779425607",
       "ats": "custom",
       "note": "27 届校园招聘（含快Star人才计划）"
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "group": "big_tech",
+      "career_url": "https://zhaopin.meituan.com/web/campus",
+      "ats": "custom",
+      "note": "2027 应届校招（含 LongCat 大模型人才校招、北斗计划）"
+    },
+    {
+      "id": "jd",
+      "name": "京东",
+      "group": "big_tech",
+      "career_url": "https://campus.jd.com/#/jobs",
+      "ats": "custom",
+      "note": "2027 校园招聘（JDS 新星计划，网申 8.3-11.30）"
+    },
+    {
+      "id": "iflytek",
+      "name": "科大讯飞",
+      "group": "big_tech",
+      "career_url": "https://iflytek.zhiye.com/campus/jobs",
+      "ats": "zhiye",
+      "note": "2027 届秋季校园招聘（含飞星计划顶尖人才专项）"
+    },
+    {
+      "id": "xiaomi",
+      "name": "小米",
+      "group": "big_tech",
+      "career_url": "https://xiaomi.jobs.f.mioffice.cn/campus/?spread=J7NS6YR",
+      "ats": "feishu",
+      "note": "2027 届全球校园招聘计划（AI 岗位需求同比增长 50%）"
     }
   ]
 }
