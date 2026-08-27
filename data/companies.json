@@ -55,6 +55,38 @@
       "career_url": "https://cq6qe6bvfr6.jobs.feishu.cn/646926",
       "ats": "feishu",
       "note": "「百川星耀计划」校招专项（2027 源点计划）"
+    },
+    {
+      "id": "bytedance",
+      "name": "字节跳动",
+      "group": "big_tech",
+      "career_url": "https://jobs.bytedance.com/campus/position",
+      "ats": "custom",
+      "note": "2027 届校招 + Seed 大模型人才校招专项"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "group": "big_tech",
+      "career_url": "https://join.qq.com/post.html",
+      "ats": "custom",
+      "note": "2027 校园招聘 + 青云计划顶尖人才专项"
+    },
+    {
+      "id": "huawei",
+      "name": "华为",
+      "group": "big_tech",
+      "career_url": "https://career.huawei.com/cn/campus-recruitment-job-list?recruitmentType=FRESH_GRADUATE",
+      "ats": "custom",
+      "note": "2027 届应届生招聘（含顶尖 AI 人才专项）"
+    },
+    {
+      "id": "kuaishou",
+      "name": "快手",
+      "group": "big_tech",
+      "career_url": "https://campus.kuaishou.cn/recruit/campus/e/#/campus/jobs?recruitSubProjectCodes=20271779425607",
+      "ats": "custom",
+      "note": "27 届校园招聘（含快Star人才计划）"
     }
   ]
 }
