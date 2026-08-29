@@ -167,6 +167,14 @@
       "career_url": "https://talent.baidu.com/jobs",
       "ats": "custom",
       "note": "2027 届校招全年开放（7.9 起）；职位列表需登录官网浏览"
+    },
+    {
+      "id": "cambricon",
+      "name": "寒武纪（Cambricon）",
+      "group": "ai_native",
+      "career_url": "https://app.mokahr.com/campus-recruitment/cambricon/44201",
+      "ats": "moka",
+      "note": "AI 芯片上市公司，2027 届校招 59 岗（芯片/软件/职能三类），限投 3 次"
     }
   ]
 }
