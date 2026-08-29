@@ -80,7 +80,7 @@
     { "name": "jackaduma/awesome_LLMs_interview_notes", "url": "https://github.com/jackaduma/awesome_LLMs_interview_notes", "stars": "1.3k+", "lang": "中文", "license": "Apache-2.0", "desc": "LLM 训练知识专题笔记入口（内容主要在知乎专栏）" },
     { "name": "adongwanai/AgentGuide", "url": "https://github.com/adongwanai/AgentGuide", "stars": "8.9k+", "lang": "中文", "license": "无许可证（仅可浏览）", "desc": "AI Agent 求职指南：LangGraph 实战、Agent 面试题与项目路线，适合应用开发方向" },
     { "name": "liyupi/mianshiya", "url": "https://github.com/liyupi/mianshiya", "stars": "5.8k+", "lang": "中文", "license": "MIT", "desc": "程序员面试刷题网站开源版（后端/计算机基础为主，可作通用八股补充）" },
-    { "name": "ninesuns/LLM-Interview-Questions", "url": "https://github.com/llmgenai/LLMInterviewQuestions", "stars": "1.9k+", "lang": "英文", "license": "无许可证（仅可浏览）", "desc": "LLM 面试问题清单（GPT/LLaMA/RAG/微调），题目导向无答案，适合自测" },
+    { "name": "llmgenai/LLMInterviewQuestions", "url": "https://github.com/llmgenai/LLMInterviewQuestions", "stars": "1.9k+", "lang": "英文", "license": "无许可证（仅可浏览）", "desc": "LLM 面试问题清单（GPT/LLaMA/RAG/微调），题目导向无答案，适合自测" },
     { "name": "Datawhale 开源教程", "url": "https://github.com/datawhalechina", "stars": "-", "lang": "中文", "license": "多数 CC-BY-SA / Apache-2.0", "desc": "self-llm（大模型学习教程）、tiny-unilm 等系统教程，从入门到部署全覆盖，求职学习主线推荐" }
   ]
 }
