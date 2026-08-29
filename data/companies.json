@@ -143,6 +143,22 @@
       "career_url": "https://www.baai.ac.cn/zh-cn",
       "ats": "manual",
       "note": "2027 届校园招聘已于 2026-07-27 启动（智源星计划）"
+    },
+    {
+      "id": "netease",
+      "name": "网易",
+      "group": "big_tech",
+      "career_url": "https://campus.163.com/app/job/position?id=103",
+      "ats": "custom",
+      "note": "网易互联网 2027 届校招（含有道等；互娱/雷火游戏另有独立站点）"
+    },
+    {
+      "id": "bilibili",
+      "name": "哔哩哔哩（B站）",
+      "group": "big_tech",
+      "career_url": "https://jobs.bilibili.com/campus/positions",
+      "ats": "custom",
+      "note": "2027 届校园招聘（94 个岗位中含大模型/AI 基建岗）"
     }
   ]
 }
