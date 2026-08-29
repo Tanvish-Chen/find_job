@@ -23,6 +23,13 @@ py -m http.server 8000
 - **临近截止高亮**：7 天内截止的岗位红色标记
 - **收藏与投递跟踪**：点 ☆ 收藏职位；每条岗位可标记投递状态（未投 / 已投 / 面试中 / 已获 offer / 被拒）。这些数据只存在你当前浏览器的 localStorage 里，换浏览器或设备不会同步
 - **数据容错**：JSON 里个别记录写错不会让页面崩溃，坏记录会被跳过并在页面顶部提示
+- **面试八股（interview.html）**：顶栏「面试材料」入口。8 大分类 59 题 AI 岗面试问答（大模型基础/训练对齐/推理优化/RAG·Agent/ML·DL/数学/分布式/行为面），点题展开答案，支持分类筛选与关键词搜索；底部附 10 个优质开源学习仓库导航
+
+## 面试题库维护
+
+题库在 `data/interview.json`：`categories`（分类）、`items`（题目：`id/category/q/a/freq`）、`resources`（外链仓库）。新增题目直接在 `items` 数组里复制模板加一条即可（`category` 必须是已有分类 id，`id` 不要重复），Commit 后自动上线。
+
+**版权说明**：`items` 为本站依据公开通行知识原创整理；知名中文面试仓库（如 wdndev/llm_interview_note、DeepLearning-500-questions 等）因许可证限制**只外链不搬运内容**，`resources` 中标注了各仓库许可证，浏览 GitHub 原仓库不受限制。
 
 ## 初始数据现状
 

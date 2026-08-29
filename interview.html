@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面试八股 - AI 校招雷达</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <h1 class="site-name">AI 校招雷达</h1>
+    <nav class="nav-links">
+      <a href="./index.html">岗位列表</a>
+      <a href="./interview.html" class="active">面试材料</a>
+    </nav>
+    <input type="search" id="qaKeywordInput" class="keyword-input"
+           placeholder="搜索题目关键词…" autocomplete="off">
+  </div>
+</header>
+
+<section class="qa-toolbar">
+  <div class="toolbar-inner">
+    <div class="cat-chips" id="catChips"></div>
+    <span class="result-count" id="qaCount"></span>
+  </div>
+</section>
+
+<main id="qaList" class="qa-list"></main>
+
+<div id="qaEmpty" class="empty-state hidden">
+  <p>没有匹配的题目</p>
+</div>
+
+<section class="resources">
+  <div class="toolbar-inner">
+    <h2>推荐学习仓库<span class="res-hint">（点击前往 GitHub；许可证为“无”的仓库仅供浏览，本站未复制其内容）</span></h2>
+    <div class="res-grid" id="resGrid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p id="resUpdatedAt"></p>
+  <p>题目为本站依据公开通行知识原创整理，供求职准备参考；以各公司实际面试为准。</p>
+</footer>
+
+<script src="./js/interview.js"></script>
+</body>
+</html>
