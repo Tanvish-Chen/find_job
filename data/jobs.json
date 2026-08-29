@@ -1751,6 +1751,40 @@
       "fetched_at": "2026-08-28",
       "headcount": null,
       "note": "全职｜技术类，发布于2026-08-27"
+    },
+    {
+      "id": "baidu-llm-01",
+      "company_id": "baidu",
+      "title": "2027届校招 - 技术类（大模型算法/智能体算法/Agent Harness研发）",
+      "direction": "llm",
+      "skills": ["大模型算法", "智能体算法", "Agent Harness"],
+      "degree": "本科",
+      "cities": ["北京", "上海", "深圳", "广州", "杭州", "成都"],
+      "apply_url": "https://talent.baidu.com/jobs",
+      "deadline": null,
+      "difficulty": { "level": "高", "note": "百度文心大模型核心团队方向，算法岗竞争激烈" },
+      "status": "open",
+      "source": "official",
+      "fetched_at": "2026-08-28",
+      "headcount": null,
+      "note": "全职｜面向 2026.9-2027.8 毕业生，网申全年开放；具体岗位需登录百度招聘官网浏览"
+    },
+    {
+      "id": "baidu-infra-01",
+      "company_id": "baidu",
+      "title": "2027届校招 - 技术类（AI Infra研发）",
+      "direction": "infra",
+      "skills": ["AI Infra", "分布式训练", "推理系统"],
+      "degree": "本科",
+      "cities": ["北京", "上海", "深圳", "广州", "杭州", "成都"],
+      "apply_url": "https://talent.baidu.com/jobs",
+      "deadline": null,
+      "difficulty": { "level": "高", "note": "大模型基础设施方向，系统功底要求高" },
+      "status": "open",
+      "source": "official",
+      "fetched_at": "2026-08-28",
+      "headcount": null,
+      "note": "全职｜面向 2026.9-2027.8 毕业生，网申全年开放；具体岗位需登录百度招聘官网浏览"
     }
   ]
 }

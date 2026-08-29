@@ -159,6 +159,14 @@
       "career_url": "https://jobs.bilibili.com/campus/positions",
       "ats": "custom",
       "note": "2027 届校园招聘（94 个岗位中含大模型/AI 基建岗）"
+    },
+    {
+      "id": "baidu",
+      "name": "百度",
+      "group": "big_tech",
+      "career_url": "https://talent.baidu.com/jobs",
+      "ats": "custom",
+      "note": "2027 届校招全年开放（7.9 起）；职位列表需登录官网浏览"
     }
   ]
 }
