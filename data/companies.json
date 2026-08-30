@@ -175,6 +175,30 @@
       "career_url": "https://app.mokahr.com/campus-recruitment/cambricon/44201",
       "ats": "moka",
       "note": "AI 芯片上市公司，2027 届校招 59 岗（芯片/软件/职能三类），限投 3 次"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "group": "big_tech",
+      "career_url": "https://job.xiaohongshu.com/campus/position",
+      "ats": "custom",
+      "note": "2027 届校招 + REDstar 顶尖人才计划（基座大模型/Agent/Infra/多模态/语音），应届生岗 54 个"
+    },
+    {
+      "id": "antgroup",
+      "name": "蚂蚁集团（Ant Group）",
+      "group": "big_tech",
+      "career_url": "https://talent.antgroup.com/campus-full-list?type=campus_graduates",
+      "ats": "custom",
+      "note": "2027 届应届生招聘（毕业时间 2026.11-2027.10），应届生岗 69 个，官方称超 80% 为 AI 相关"
+    },
+    {
+      "id": "ctrip",
+      "name": "携程集团（Trip.com Group）",
+      "group": "big_tech",
+      "career_url": "https://careers.ctrip.com/campus#/campus/jobList",
+      "ats": "custom",
+      "note": "2027 届秋招 53 岗（毕业时间 2026.9-2027.8）；核心大模型方向可在职位类型筛「技术」"
     }
   ]
 }
